@@ -72,7 +72,7 @@ var html = function(item, parent, eachFn) {
                   return key + '="'+escapeAttrib(item.attribs[key])+'"';
                 }).join(' ');
         }
-        if(item.children) {
+        if(item.children.length > 0) {
           // parent becomes the current element
           // check if the current item (before any eachFns are run) - is a renderable
           if(!orig.render) {
@@ -81,7 +81,7 @@ var html = function(item, parent, eachFn) {
           result += '>'+html(item.children, orig, eachFn)+(emptyTags[item.name] ? '' : '</'+item.name+'>');
         } else {
           if(emptyTags[item.name]) {
-            result += '>';
+            result += ' />';
           } else {
             result += '></'+item.name+'>';
           }
