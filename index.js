@@ -72,7 +72,7 @@ var html = function(item, parent, eachFn) {
                   return key + '="'+escapeAttrib(item.attribs[key])+'"';
                 }).join(' ');
         }
-        if(item.children.length > 0) {
+        if(item.children && item.children.length > 0) {
           // parent becomes the current element
           // check if the current item (before any eachFns are run) - is a renderable
           if(!orig.render) {
