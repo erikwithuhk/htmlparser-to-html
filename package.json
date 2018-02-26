@@ -3,7 +3,9 @@
   "version": "0.0.6",
   "description": "Converts the JSON that the htmlparser/htmlparser2 package produces back to HTML.",
   "main": "index.js",
+  "private": "true",
   "scripts": {
+    "release": "np",
     "test": "node test.js"
   },
   "repository": {
@@ -21,6 +23,7 @@
   "readmeFilename": "readme.md",
   "devDependencies": {
     "mocha": "~1.9.0",
-    "htmlparser": "~1.7.6"
+    "htmlparser": "~1.7.6",
+    "np": "^2.20.1"
   }
 }
